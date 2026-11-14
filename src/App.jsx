@@ -219,7 +219,10 @@ function CafeSite() {
                 </button>
               </div>
             </div>
-            <iframe src="/assets/burgeraya-menu.pdf#view=FitH" title="منيو برجراية المصور" />
+            <div className="menu-pdf-pages" aria-label="صفحات المنيو المصور">
+              <img src="/assets/burgeraya-menu-page-1.jpg" alt="الصفحة الأولى من منيو برجراية" />
+              <img src="/assets/burgeraya-menu-page-2.jpg" alt="الصفحة الثانية من منيو برجراية" />
+            </div>
           </section>
         </div>
       )}
