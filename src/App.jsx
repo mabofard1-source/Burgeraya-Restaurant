@@ -112,6 +112,7 @@ function CafeSite() {
   const [activeSection, setActiveSection] = useState('home');
   const [search, setSearch] = useState('');
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [menuPdfOpen, setMenuPdfOpen] = useState(false);
 
   const term = search.trim().toLowerCase();
 
@@ -182,8 +183,47 @@ function CafeSite() {
     closeMobileNav();
   };
 
+  useEffect(() => {
+    if (!menuPdfOpen) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') setMenuPdfOpen(false);
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', closeOnEscape);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [menuPdfOpen]);
+
   return (
     <>
+      {menuPdfOpen && (
+        <div className="menu-pdf-viewer">
+          <button
+            className="menu-pdf-backdrop"
+            type="button"
+            aria-label="إغلاق المنيو المصور"
+            onClick={() => setMenuPdfOpen(false)}
+          />
+          <section className="menu-pdf-dialog" role="dialog" aria-modal="true" aria-label="المنيو المصور لبرجراية">
+            <div className="menu-pdf-toolbar">
+              <h2>المنيو المصور</h2>
+              <div className="menu-pdf-actions">
+                <a href="/assets/burgeraya-menu.pdf" download="Burgeraya-Menu.pdf">تنزيل PDF</a>
+                <button type="button" onClick={() => setMenuPdfOpen(false)} aria-label="رجوع إلى الموقع">
+                  <span aria-hidden="true">→</span> رجوع
+                </button>
+              </div>
+            </div>
+            <iframe src="/assets/burgeraya-menu.pdf#view=FitH" title="منيو برجراية المصور" />
+          </section>
+        </div>
+      )}
+
       {mobileNavOpen && (
         <div className="mobile-menu-layer">
           <button
@@ -346,7 +386,9 @@ function CafeSite() {
             <p>
               اختار البرجر والوجبة اللي على مزاجك.
             </p>
-            <a className="menu-pdf-link" href="/assets/burgeraya-menu.pdf" target="_blank" rel="noreferrer">المنيو المصور كاملًا <span>↗</span></a>
+            <button className="menu-pdf-link" type="button" onClick={() => setMenuPdfOpen(true)}>
+              المنيو المصور كاملًا <span>↗</span>
+            </button>
           </div>
 
           <div className="menu-tools">
