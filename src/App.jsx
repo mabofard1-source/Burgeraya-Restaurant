@@ -194,7 +194,17 @@ function CafeSite() {
           />
 
           <nav className="mobile-menu-panel" aria-label="قائمة الهاتف">
-            <Brand onClick={closeMobileNav} />
+            <div className="mobile-menu-heading">
+              <Brand onClick={closeMobileNav} />
+              <button
+                className="mobile-menu-back"
+                type="button"
+                aria-label="رجوع وإغلاق القائمة"
+                onClick={closeMobileNav}
+              >
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
 
             <a
               className={`mobile-menu-link${activeSection === 'home' ? ' active' : ''}`}
@@ -223,40 +233,6 @@ function CafeSite() {
               <span className="nav-arrow" aria-hidden="true">↗</span>
             </a>
 
-            <a
-              className={`mobile-menu-link${activeSection === 'locations' ? ' active' : ''}`}
-              href="#locations"
-              onClick={() => handleNavClick('locations')}
-            >
-              <span>العنوان والتواصل</span>
-              <span className="nav-arrow" aria-hidden="true">↗</span>
-            </a>
-
-            <a
-              className="mobile-menu-view"
-              href="#menu"
-              onClick={() => handleNavClick('menu')}
-            >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M5 9h11v8a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V9Zm11 2h2a2.5 2.5 0 0 1 0 5h-2M8 6c-1-1 1-1.5 0-2.5M12 6c-1-1 1-1.5 0-2.5" />
-              </svg>
-              <span>شوف المنيو</span>
-            </a>
-
-            <a
-              className="mobile-menu-location"
-              href="#locations"
-              onClick={() => handleNavClick('locations')}
-            >
-              <svg className="maps-marker" viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M12 22s8-7.3 8-13A8 8 0 1 0 4 9c0 5.7 8 13 8 13Z"
-                  fill="#EA4335"
-                />
-                <circle cx="12" cy="9" r="3" fill="#fff" />
-              </svg>
-              <span>العنوان والتواصل</span>
-            </a>
           </nav>
         </div>
       )}
@@ -579,7 +555,6 @@ function CafeSite() {
             <a href="#home">الرئيسية</a>
             <a href="#menu">المنيو</a>
             <a href="#locations">العنوان والتواصل</a>
-            <a href="https://www.facebook.com/burgerayaa" target="_blank" rel="noreferrer">فيسبوك ↗</a>
           </nav>
 
           <a href="#home" className="footer-top-button">

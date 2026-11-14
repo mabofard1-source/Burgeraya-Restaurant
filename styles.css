@@ -3012,13 +3012,6 @@ a {
   outline: none;
 }
 
-/* Facebook glows blue */
-.footer-reference-row nav a:last-child:hover,
-.footer-reference-row nav a:last-child:focus-visible {
-  color: #1877f2;
-  text-shadow: 0 0 13px #1877f299;
-}
-
 /* Dark mode */
 :root[data-theme="dark"] .footer-reference-row nav a {
   color: #f0e5d8;
@@ -3027,11 +3020,6 @@ a {
 :root[data-theme="dark"] .footer-reference-row nav a:hover,
 :root[data-theme="dark"] .footer-reference-row nav a:focus-visible {
   color: #e4a16d;
-}
-
-:root[data-theme="dark"] .footer-reference-row nav a:last-child:hover,
-:root[data-theme="dark"] .footer-reference-row nav a:last-child:focus-visible {
-  color: #58a6ff;
 }
 
 /* Mobile */
