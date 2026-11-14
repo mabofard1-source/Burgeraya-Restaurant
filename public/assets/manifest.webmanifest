@@ -1,0 +1,15 @@
+{
+  "name": "برجراية",
+  "short_name": "برجراية",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff7ed",
+  "theme_color": "#a80000",
+  "icons": [
+    {
+      "src": "/assets/burgeraya-logo.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
