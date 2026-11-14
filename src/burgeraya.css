@@ -1242,3 +1242,22 @@ button:active,
 }
 .art-halo { background: #ffbd19; }
 .burgeraya-facebook-link { background: #2458a6; color: #fff; }
+
+/* Make the add action easier to spot and tap beside menu prices. */
+.kc-size-option .qc-add {
+  min-width: 58px;
+  height: 38px;
+  min-height: 38px;
+  padding: 0 11px;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+@media (max-width: 640px) {
+  .kc-size-option .qc-add {
+    min-width: 64px;
+    height: 42px;
+    min-height: 42px;
+    font-size: 13px;
+  }
+}
