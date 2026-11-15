@@ -409,10 +409,16 @@ body {
 }
 
 .item-description {
+  display: -webkit-box;
+  max-width: 250px;
+  overflow: hidden;
   color: #77695b;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 500;
-  line-height: 1.55;
+  line-height: 1.4;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
 }
 
 .kc-size-options {
@@ -1367,6 +1373,17 @@ button:active,
 }
 .art-halo { background: #ffbd19; }
 .burgeraya-facebook-link { background: #2458a6; color: #fff; }
+
+@media (max-width: 640px) {
+  .item-description {
+    display: block;
+    max-width: 100%;
+    font-size: 10px;
+    line-height: 1.55;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+  }
+}
 
 .burgeraya-social-links {
   display: flex;
