@@ -1367,9 +1367,55 @@ button:active,
   font-size: 21px;
 }
 
+.social-card {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-card > .footer-label {
+  display: block;
+  margin: 0;
+  color: #a80000;
+  font-family: var(--body);
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.4;
+  opacity: 1;
+  visibility: visible;
+}
+
+.burgeraya-social-link {
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.burgeraya-social-link:hover,
+.burgeraya-social-link:focus-visible {
+  transform: translateY(-5px) scale(1.12);
+  box-shadow: 0 8px 18px #3b17123b;
+  filter: brightness(1.08);
+}
+
+.burgeraya-social-link:active {
+  transform: scale(.94);
+}
+
+.burgeraya-social-link:focus-visible {
+  outline: 2px solid #a80000;
+  outline-offset: 3px;
+}
+
 .burgeraya-social-link.facebook { background: #2458a6; }
 .burgeraya-social-link.instagram { background: #c13584; }
 .burgeraya-social-link.tiktok { background: #171717; }
+
+@media (prefers-reduced-motion: reduce) {
+  .burgeraya-social-link {
+    transition: none;
+  }
+}
 
 /* Make the add action easier to spot and tap beside menu prices. */
 .kc-size-option .qc-add {
