@@ -569,6 +569,7 @@ function CafeSite() {
                 </div>
               </article>
               <article className="location-card social-card">
+                <span className="footer-label">تابعونا</span>
                 <div className="burgeraya-social-links">
                   <a className="burgeraya-social-link facebook" href="https://www.facebook.com/burgerayaa" target="_blank" rel="noreferrer" aria-label="صفحة برجراية على فيسبوك" title="فيسبوك">
                     <FaFacebookF />
