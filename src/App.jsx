@@ -1,6 +1,7 @@
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { FaFacebookF } from 'react-icons/fa';
+import { FaInstagram, FaTiktok } from 'react-icons/fa6';
 import AdminPanel from './AdminPanel.jsx';
 import { CartProvider } from './Cart/CartContext.jsx';
 import QuantityControl from './Cart/QuantityControl.jsx';
@@ -570,13 +571,19 @@ function CafeSite() {
               <article className="location-card social-card">
                 <div>
                   <span className="footer-label">تابعونا</span>
-                  <h3>برجراية على فيسبوك</h3>
+                  <h3>تابع برجراية</h3>
                 </div>
-                <a className="burgeraya-facebook-link" href="https://www.facebook.com/burgerayaa" target="_blank" rel="noreferrer" aria-label="صفحة برجراية على فيسبوك">
-                  <FaFacebookF />
-                  <span>افتح صفحتنا</span>
-                  <b>↗</b>
-                </a>
+                <div className="burgeraya-social-links">
+                  <a className="burgeraya-social-link facebook" href="https://www.facebook.com/burgerayaa" target="_blank" rel="noreferrer" aria-label="صفحة برجراية على فيسبوك">
+                    <FaFacebookF /><span>فيسبوك</span><b>↗</b>
+                  </a>
+                  <a className="burgeraya-social-link instagram" href="https://www.instagram.com/burgeraia/" target="_blank" rel="noreferrer" aria-label="صفحة برجراية على إنستجرام">
+                    <FaInstagram /><span>إنستجرام</span><b>↗</b>
+                  </a>
+                  <a className="burgeraya-social-link tiktok" href="https://www.tiktok.com/@burgraia" target="_blank" rel="noreferrer" aria-label="صفحة برجراية على تيك توك">
+                    <FaTiktok /><span>تيك توك</span><b>↗</b>
+                  </a>
+                </div>
               </article>
             </div>
             <div className="map-card burgeraya-map-card">

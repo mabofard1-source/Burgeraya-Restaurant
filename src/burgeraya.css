@@ -1345,6 +1345,37 @@ button:active,
 .art-halo { background: #ffbd19; }
 .burgeraya-facebook-link { background: #2458a6; color: #fff; }
 
+.burgeraya-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  direction: rtl;
+}
+
+.burgeraya-social-link {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.burgeraya-social-link svg {
+  font-size: 17px;
+}
+
+.burgeraya-social-link b {
+  font-size: 15px;
+}
+
+.burgeraya-social-link.facebook { background: #2458a6; }
+.burgeraya-social-link.instagram { background: #c13584; }
+.burgeraya-social-link.tiktok { background: #171717; }
+
 /* Make the add action easier to spot and tap beside menu prices. */
 .kc-size-option .qc-add {
   min-width: 58px;
