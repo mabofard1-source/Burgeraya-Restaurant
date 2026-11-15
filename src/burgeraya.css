@@ -418,6 +418,19 @@ body {
   line-height: 1.55;
 }
 
+@media (min-width: 641px) {
+  .menu-item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+  }
+
+  .menu-item > .kc-item-end {
+    grid-column: 1;
+    justify-self: start;
+    margin-top: 3px;
+  }
+}
+
 .kc-size-options {
   display: flex;
   flex: 0 0 auto;
