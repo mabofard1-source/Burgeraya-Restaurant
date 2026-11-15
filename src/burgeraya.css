@@ -390,13 +390,29 @@ body {
 
 .menu-item {
   gap: 8px;
+  align-items: start;
   text-align: right;
+}
+
+.item-name-wrap {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+  grid-column: 1;
 }
 
 .item-name {
   flex: 1 1 90px;
   text-align: right;
   line-height: 1.7;
+}
+
+.item-description {
+  color: #77695b;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.55;
 }
 
 .kc-size-options {
@@ -746,6 +762,13 @@ body {
   .locations-section,
   .menu-section {
     text-align: right;
+  }
+
+  .story-copy .text-link {
+    display: flex;
+    width: max-content;
+    margin-right: auto;
+    margin-left: 0;
   }
 
   .burgeraya-facebook-card > img {
