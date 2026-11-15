@@ -396,9 +396,10 @@ body {
 
 .item-name-wrap {
   display: flex;
+  align-self: start;
   min-width: 0;
   flex-direction: column;
-  gap: 2px;
+  gap: 0;
   grid-column: 1;
 }
 
@@ -409,16 +410,12 @@ body {
 }
 
 .item-description {
-  display: -webkit-box;
-  max-width: 250px;
-  overflow: hidden;
+  display: block;
+  max-width: 100%;
   color: #77695b;
   font-size: 9px;
   font-weight: 500;
-  line-height: 1.4;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
+  line-height: 1.35;
 }
 
 .kc-size-options {
