@@ -1354,22 +1354,17 @@ button:active,
 
 .burgeraya-social-link {
   display: inline-flex;
-  min-height: 40px;
+  width: 44px;
+  height: 44px;
   align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
+  justify-content: center;
+  padding: 0;
   border-radius: 999px;
   color: #fff;
-  font-size: 12px;
-  font-weight: 800;
 }
 
 .burgeraya-social-link svg {
-  font-size: 17px;
-}
-
-.burgeraya-social-link b {
-  font-size: 15px;
+  font-size: 21px;
 }
 
 .burgeraya-social-link.facebook { background: #2458a6; }

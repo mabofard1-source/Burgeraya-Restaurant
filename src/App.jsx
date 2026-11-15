@@ -569,19 +569,15 @@ function CafeSite() {
                 </div>
               </article>
               <article className="location-card social-card">
-                <div>
-                  <span className="footer-label">تابعونا</span>
-                  <h3>تابع برجراية</h3>
-                </div>
                 <div className="burgeraya-social-links">
-                  <a className="burgeraya-social-link facebook" href="https://www.facebook.com/burgerayaa" target="_blank" rel="noreferrer" aria-label="صفحة برجراية على فيسبوك">
-                    <FaFacebookF /><span>فيسبوك</span><b>↗</b>
+                  <a className="burgeraya-social-link facebook" href="https://www.facebook.com/burgerayaa" target="_blank" rel="noreferrer" aria-label="صفحة برجراية على فيسبوك" title="فيسبوك">
+                    <FaFacebookF />
                   </a>
-                  <a className="burgeraya-social-link instagram" href="https://www.instagram.com/burgeraia/" target="_blank" rel="noreferrer" aria-label="صفحة برجراية على إنستجرام">
-                    <FaInstagram /><span>إنستجرام</span><b>↗</b>
+                  <a className="burgeraya-social-link instagram" href="https://www.instagram.com/burgeraia/" target="_blank" rel="noreferrer" aria-label="صفحة برجراية على إنستجرام" title="إنستجرام">
+                    <FaInstagram />
                   </a>
-                  <a className="burgeraya-social-link tiktok" href="https://www.tiktok.com/@burgraia" target="_blank" rel="noreferrer" aria-label="صفحة برجراية على تيك توك">
-                    <FaTiktok /><span>تيك توك</span><b>↗</b>
+                  <a className="burgeraya-social-link tiktok" href="https://www.tiktok.com/@burgraia" target="_blank" rel="noreferrer" aria-label="صفحة برجراية على تيك توك" title="تيك توك">
+                    <FaTiktok />
                   </a>
                 </div>
               </article>
